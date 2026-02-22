@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.env
+uploads
+
+# ignore local config files if any
+configs/*.js
