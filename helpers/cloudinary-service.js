@@ -38,7 +38,7 @@ export const uploadImage = async (filePath, fileName) => {
       throw new Error(`Error uploading image: ${result.error.message}`);
     }
 
-    return fileName;
+    return result.secure_url;
   } catch (error) {
     console.error('Error uploading to Cloudinary:', error?.message || error);
 

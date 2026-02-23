@@ -4,7 +4,7 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=KinalSportsIN6BM
+      - POSTGRES_DB=InicioSesionDB
     ports:
       - "5436:5432"
     volumes:
@@ -20,7 +20,7 @@ services:
       - PORT=3005
       - DB_HOST=db
       - DB_PORT=5432
-      - DB_NAME=KinalSportsIN6BM
+      - DB_NAME=InicioSesionDB
       - DB_USERNAME=root
       - DB_PASSWORD=admin
     depends_on:

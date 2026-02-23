@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "eec6f361-37e2-4bb2-aecc-2c5d8fc5b326",
+		"name": "AuthService-GestorComentarios",
+		"description": "Postman collection for KinalSports Authentication Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "52283264",
+		"_collection_link": "https://isuarez-2021691-7572583.postman.co/workspace/Iosef's-Workspace~bb715df8-0696-4af8-898c-0e785264ed73/collection/52283264-eec6f361-37e2-4bb2-aecc-2c5d8fc5b326?action=share&source=collection_link&creator=52283264"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "pp",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "pp",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pp",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pp2319108@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Mlgdi3301",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "53170347",
+							"type": "text"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"emailOrUsername\": \"pp2319108@gmail.com\",\n  \"password\": \"ola123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"qnluCKg_CSHaAEkSiwe2NwhFDiAzl2ruzvtMctHox1Q\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/verify-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"verify-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resend Verification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pp2319108@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/resend-verification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"resend-verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"pp2319108@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"4_vf9AOj2DlJaajvf_qQMqavyW78-cGtBU85rJ8cO8U\",\n  \"newPassword\": \"ola123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile (JWT Required)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfUkN0ZkdNa01CeVpYIiwianRpIjoiNzMzZTY2YTctMTc5ZC00Zjk5LTg2MDktODg0NTZkN2JjZWQ0IiwiaWF0IjoxNzcxODIyNDA1LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxODI0MjA1LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.KAy2ATYIF81G2Wob-Tzo7Q1dSOQ32e1CewrhKNU7fWk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer TU_TOKEN_AQUI"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3129/api/v1/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3129",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
