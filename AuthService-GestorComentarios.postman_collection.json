@@ -23,32 +23,38 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "pp",
+							"value": "",
+							"description": "Ingrese su nombre",
 							"type": "text"
 						},
 						{
 							"key": "surname",
-							"value": "pp",
+							"value": "",
+							"description": "Ingrese su apellido",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "pp",
+							"value": "",
+							"description": "Ingrese su nombre de usuario",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "pp2319108@gmail.com",
+							"value": "",
+							"description": "Ingrese su correo",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Mlgdi3301",
+							"value": "",
+							"description": "Ingrese su contraseña",
 							"type": "text"
 						},
 						{
 							"key": "phone",
-							"value": "53170347",
+							"value": "",
+							"description": "Ingrese su telefono",
 							"type": "text"
 						},
 						{
@@ -87,7 +93,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"emailOrUsername\": \"pp2319108@gmail.com\",\n  \"password\": \"ola123456\"\n}"
+					"raw": "{\n  \"emailOrUsername\": \"\",\n  \"password\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/login",
@@ -118,7 +124,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"token\": \"qnluCKg_CSHaAEkSiwe2NwhFDiAzl2ruzvtMctHox1Q\"\n}"
+					"raw": "{\n  \"token\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/verify-email",
@@ -149,7 +155,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"pp2319108@gmail.com\"\n}"
+					"raw": "{\n  \"email\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/resend-verification",
@@ -180,7 +186,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"pp2319108@gmail.com\"\n}"
+					"raw": "{\n  \"email\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/forgot-password",
@@ -211,7 +217,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"token\": \"4_vf9AOj2DlJaajvf_qQMqavyW78-cGtBU85rJ8cO8U\",\n  \"newPassword\": \"ola123456\"\n}"
+					"raw": "{\n  \"token\": \"\",\n  \"newPassword\": \"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/reset-password",
@@ -232,13 +238,16 @@
 		},
 		{
 			"name": "Get Profile (JWT Required)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfUkN0ZkdNa01CeVpYIiwianRpIjoiNzMzZTY2YTctMTc5ZC00Zjk5LTg2MDktODg0NTZkN2JjZWQ0IiwiaWF0IjoxNzcxODIyNDA1LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxODI0MjA1LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.KAy2ATYIF81G2Wob-Tzo7Q1dSOQ32e1CewrhKNU7fWk",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfQlR5MjVZd0tUMzZVIiwianRpIjoiMjhhNmI1NjktNTQ3NC00OWM5LTk3NmMtNjJjNTcxNjAzYjgyIiwiaWF0IjoxNzcxOTAwNTIwLCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxOTAyMzIwLCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.PpE5oYV8lbGJfhfzejDCEajAWmSStTd4a3fzC7BmgKE",
 							"type": "string"
 						}
 					]
@@ -250,6 +259,15 @@
 						"value": "Bearer TU_TOKEN_AQUI"
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "//Se ingresa el token del usuario logueado para obetener los detalles de su usario ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3129/api/v1/auth/profile",
 					"protocol": "http",
